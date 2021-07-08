@@ -1,52 +1,54 @@
 package Entities;
 
+import java.util.Arrays;
 import java.util.Date;
 
 public class Professor extends Funcionario {
 
-	private String matricula;
-	private String unidade;
-	private String departamento;
+	private int numCopias;
+	private int numCopiasGratuitas;
+	private Disciplina disciplina[];
 
 	public Professor() {
 		super();
 	}
 
 	public Professor(String nome, String sexo, Date dataDeNascimento, String matricula, String unidade,
-			String departamento, String matricula2, String unidade2, String departamento2) {
+			String departamento, int numCopias, int numCopiasGratuitas, Disciplina[] disciplina) {
 		super(nome, sexo, dataDeNascimento, matricula, unidade, departamento);
-		matricula = matricula2;
-		unidade = unidade2;
-		departamento = departamento2;
+		this.numCopias = numCopias;
+		this.numCopiasGratuitas = numCopiasGratuitas;
+		this.disciplina = disciplina;
 	}
 
-	public String getMatricula() {
-		return matricula;
+	public int getNumCopias() {
+		return numCopias;
 	}
 
-	public void setMatricula(String matricula) {
-		this.matricula = matricula;
+	public void setNumCopias(int numCopias) {
+		this.numCopias = numCopias;
 	}
 
-	public String getUnidade() {
-		return unidade;
+	public int getNumCopiasGratuitas() {
+		return numCopiasGratuitas;
 	}
 
-	public void setUnidade(String unidade) {
-		this.unidade = unidade;
+	public void setNumCopiasGratuitas(int numCopiasGratuitas) {
+		this.numCopiasGratuitas = numCopiasGratuitas;
 	}
 
-	public String getDepartamento() {
-		return departamento;
+	public Disciplina[] getDisciplina() {
+		return disciplina;
 	}
 
-	public void setDepartamento(String departamento) {
-		this.departamento = departamento;
+	public void setDisciplina(Disciplina[] disciplina) {
+		this.disciplina = disciplina;
 	}
 
 	@Override
 	public String toString() {
-		return "Professor [matricula=" + matricula + ", unidade=" + unidade + ", departamento=" + departamento + "]";
+		return "Professor [numCopias=" + numCopias + ", numCopiasGratuitas=" + numCopiasGratuitas + ", disciplina="
+				+ Arrays.toString(disciplina) +  "]";
 	}
 
 }

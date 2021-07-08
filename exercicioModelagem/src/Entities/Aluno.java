@@ -13,14 +13,16 @@ public class Aluno extends Usuario{
 		super();
 	}
 
-	public Aluno(String nome, String sexo, Date dataDeNascimento, String matricula, String curso,
+
+	public Aluno(String nome, String sexo, Date dataDeNascimento,String matricula, String curso,
 			int numeroDeCopiasGratuitas) {
 		super(nome, sexo, dataDeNascimento);
-		super.setIdade(calculaData());
+		this.setIdade(calculaData());
 		this.matricula = matricula;
 		this.curso = curso;
 		this.numeroDeCopiasGratuitas = numeroDeCopiasGratuitas;
 	}
+
 
 
 	public String getMatricula() {
@@ -44,4 +46,5 @@ public class Aluno extends Usuario{
 		return "Aluno [matricula=" + matricula + ", curso=" + curso + "]";
 	}
 
+	
 }

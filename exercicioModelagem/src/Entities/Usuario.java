@@ -82,7 +82,6 @@ public class Usuario {
 		int ano2=cal2.get(Calendar.YEAR);
 		
 		int yearsOld=ano2-ano;
-		System.out.println(yearsOld);
 		if(mes>=mes2  && dia>=dia2)
 		{
 			yearsOld++;

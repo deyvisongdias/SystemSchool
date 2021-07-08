@@ -23,8 +23,6 @@ public class Main {
 		System.out.println(deyvison.toString());
 		
 		
-		
-		
 		sc.close();
 		
 
