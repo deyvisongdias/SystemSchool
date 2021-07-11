@@ -4,6 +4,7 @@ public class Disciplina {
 
 	private String nome;
 	private String codigo;
+	private String semestre;
 
 	public Disciplina() {
 		super();
@@ -31,9 +32,19 @@ public class Disciplina {
 		this.codigo = codigo;
 	}
 
+	public String getSemestre() {
+		return semestre;
+	}
+
+	public void setSemestre(String semestre) {
+		this.semestre = semestre;
+	}
+
 	@Override
 	public String toString() {
-		return "Disciplina [nome=" + nome + ", codigo=" + codigo + "]";
+		return "Disciplina [nome=" + nome + ", codigo=" + codigo + ", semestre=" + semestre + "]";
 	}
+
+	
 
 }

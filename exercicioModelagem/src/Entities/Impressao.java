@@ -1,38 +1,51 @@
 package Entities;
 
-import java.sql.Date;
+import java.util.Date;
 
+import Entities.enumeration.Pagamento;
 import Entities.enumeration.Status;
 
 public class Impressao {
 
-	private int numero;
 	private Date date;
 	private String hora;
 	private String arquivos;
+	private String cor;
 	private int numeroDeCopias;
 	private Status status;
+    private Double custo;
+    private Pagamento p;
+    
 
-	public Impressao() {
+	public Impressao(Date data, String hora, String arquivos, String cor, int numeroDeCopias, Status status,Double custo) {
 		super();
-	}
-
-	public Impressao(int numero, Date date, String hora, String arquivos, int numeroDeCopias, Status status) {
-		super();
-		this.numero = numero;
-		this.date = date;
+		this.date = data;
 		this.hora = hora;
 		this.arquivos = arquivos;
+		this.cor = cor;
 		this.numeroDeCopias = numeroDeCopias;
 		this.status = status;
+		this.custo=custo;
+	}
+	
+	public Impressao(Date data, String hora, String arquivos, String cor, int numeroDeCopias, Status status,Double custo,Pagamento p) {
+		super();
+		this.date = data;
+		this.hora = hora;
+		this.arquivos = arquivos;
+		this.cor = cor;
+		this.numeroDeCopias = numeroDeCopias;
+		this.status = status;
+		this.custo=custo;
+		this.p=p;
 	}
 
-	public int getNumero() {
-		return numero;
+	public String getCor() {
+		return cor;
 	}
 
-	public void setNumero(int numero) {
-		this.numero = numero;
+	public void setCor(String cor) {
+		this.cor = cor;
 	}
 
 	public Date getDate() {
@@ -66,6 +79,16 @@ public class Impressao {
 	public void setNumeroDeCopias(int numeroDeCopias) {
 		this.numeroDeCopias = numeroDeCopias;
 	}
+	
+	
+
+	public Double getCusto() {
+		return custo;
+	}
+
+	public void setCusto(Double custo) {
+		this.custo = custo;
+	}
 
 	public Status getStatus() {
 		return status;
@@ -77,8 +100,9 @@ public class Impressao {
 
 	@Override
 	public String toString() {
-		return "Impressao [numero=" + numero + ", date=" + date + ", hora=" + hora + ", arquivos=" + arquivos
-				+ ", numeroDeCopias=" + numeroDeCopias + ", status=" + status + "]";
+		return "Impressao [date=" + date + ", hora=" + hora + ", arquivos=" + arquivos + ", cor=" + cor
+				+ ", numeroDeCopias=" + numeroDeCopias + ", status=" + status + ", custo=" + custo + ", p=" + p + "]";
 	}
 
+	
 }
